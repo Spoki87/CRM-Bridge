@@ -1,26 +1,17 @@
 package com.bridge.zoho.auth.model;
 
 import com.bridge.zoho.auth.dto.TokenResponse;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
-
 import java.time.LocalDateTime;
 
 @Component
+@NoArgsConstructor
 public class Token {
 
-    private static Token instance;
 
     private String accessToken;
-    private LocalDateTime expiryTime;
-
-    private Token() {}
-
-    public static synchronized Token getInstance() {
-        if (instance == null) {
-            instance = new Token();
-        }
-        return instance;
-    }
+    private LocalDateTime expiryTime = LocalDateTime.now();
 
     public void update(TokenResponse tokenResponse){
         this.accessToken = tokenResponse.getAccessToken();

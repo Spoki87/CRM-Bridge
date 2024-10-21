@@ -1,7 +1,8 @@
 package com.bridge.zoho.api;
 
+import com.bridge.zoho.auth.service.TokenService;
+import com.bridge.zoho.enums.Module;
 import com.bridge.zoho.model.response.CrmResponse;
-import com.bridge.zoho.auth.model.Token;
 import com.bridge.zoho.model.request.CrmRequest;
 import com.bridge.zoho.utils.CrmUrlBuilder;
 import lombok.AllArgsConstructor;
@@ -13,22 +14,24 @@ import org.springframework.web.client.RestTemplate;
 @AllArgsConstructor
 public class CrmApiClient {
 
-    private final RestTemplate restTemplate;
-    CrmUrlBuilder crmUrlBuilder;
-    private final Token token;
+    private RestTemplate restTemplate;
+    private CrmUrlBuilder crmUrlBuilder;
+    private TokenService tokenService;
 
 
-    public <T> void sendDataToCrm(CrmRequest<T> requestData, String module) {
+    public <T> CrmResponse sendDataToCrm(CrmRequest<T> requestData, Module module) {
 
         String requestUrl = crmUrlBuilder.buildRequestUrl(module);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.setBearerAuth(token.getAccessToken());
+        headers.setBearerAuth(tokenService.getAccessToken());
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<CrmRequest<T>> request = new HttpEntity<>(requestData, headers);
 
+        System.out.println(requestUrl);
         ResponseEntity<CrmResponse> response = restTemplate.exchange(requestUrl, HttpMethod.POST, request, CrmResponse.class);
 
+        return response.getBody();
     }
 }

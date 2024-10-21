@@ -32,7 +32,7 @@ public class CrmLeadDto {
     private String leadSource;
 
     @JsonProperty("Owner")
-    private long owner;
+    private Long owner;
 
     @JsonProperty("Salutation")
     private String salutation;

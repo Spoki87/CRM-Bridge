@@ -1,6 +1,6 @@
 package com.bridge.mapper;
 
-public interface Mapper<T, U> {
+public interface MapperImpl<T, U> {
     U toDto(T entity);
     T toEntity(U dto);
 }

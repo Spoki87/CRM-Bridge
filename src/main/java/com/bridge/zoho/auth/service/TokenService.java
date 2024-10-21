@@ -6,23 +6,25 @@ import com.bridge.zoho.utils.CrmUrlBuilder;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
-@NoArgsConstructor
-@AllArgsConstructor
 public class TokenService {
 
-    private Token token = Token.getInstance();
-    private CrmUrlBuilder crmUrlBuilder;
-    private RestTemplate restTemplate;
+    private final Token token;
+    private final CrmUrlBuilder crmUrlBuilder;
+    private final RestTemplate restTemplate;
+
+    public TokenService(Token token,CrmUrlBuilder crmUrlBuilder, RestTemplate restTemplate) {
+        this.token = token;
+        this.crmUrlBuilder = crmUrlBuilder;
+        this.restTemplate = restTemplate;
+    }
 
     @Value("${crm.client-id}")
     private String clientId;
@@ -51,18 +53,19 @@ public class TokenService {
 
         String refreshTokenUrl = crmUrlBuilder.buildTokenUrl();
 
-        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
-        body.add("refresh_token", refreshToken);
-        body.add("client_id", clientId);
-        body.add("client_secret", clientSecret);
-        body.add("grant_type", "refresh_token");
+        String requestUrl = UriComponentsBuilder.fromHttpUrl(refreshTokenUrl)
+                .queryParam("refresh_token", refreshToken)
+                .queryParam("client_id", clientId)
+                .queryParam("client_secret", clientSecret)
+                .queryParam("grant_type", "refresh_token")
+                .toUriString();
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Content-Type", "application/x-www-form-urlencoded");
+        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
-        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(body, headers);
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(headers);
 
-        ResponseEntity<TokenResponse> response = restTemplate.exchange(refreshTokenUrl, HttpMethod.POST, request, TokenResponse.class);
+        ResponseEntity<TokenResponse> response = restTemplate.exchange(requestUrl, HttpMethod.POST, request, TokenResponse.class);
 
         if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
             updateToken(response.getBody());

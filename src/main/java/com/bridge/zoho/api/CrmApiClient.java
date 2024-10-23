@@ -29,7 +29,6 @@ public class CrmApiClient {
 
         HttpEntity<CrmRequest<T>> request = new HttpEntity<>(requestData, headers);
 
-        System.out.println(requestUrl);
         ResponseEntity<CrmResponse> response = restTemplate.exchange(requestUrl, HttpMethod.POST, request, CrmResponse.class);
 
         return response.getBody();

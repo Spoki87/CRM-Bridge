@@ -1,30 +1,22 @@
-package com.bridge.data.lead.model;
+package com.bridge.data.account.model;
 
 import com.bridge.data.owner.model.Owner;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Data;
 
-@Entity
 @Data
-public class Lead {
+@Entity
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
-    private String firstName;
-
-    private String lastName;
-
-    private String email;
-
-    private String phone;
+    private String accountName;
 
     @ManyToOne
     @JoinColumn(name = "owner")
     private Owner owner;
 
     private Long zohoId;
-
 }
-

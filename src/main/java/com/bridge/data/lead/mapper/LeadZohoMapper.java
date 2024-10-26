@@ -12,7 +12,6 @@ public class LeadZohoMapper implements MapperImpl<Lead, CrmLeadDto> {
     @Override
     public CrmLeadDto toDto(Lead entity) {
         CrmLeadDto dto = new CrmLeadDto();
-        dto.setLastName(entity.getLastName());
         return dto;
     }
 }

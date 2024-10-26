@@ -10,7 +10,11 @@ public enum Module {
     CONTACTS("Contacts"),
     ACCOUNTS("Accounts"),
     DEALS("Deals"),
-    PRODUCTS("Products");
+    PRODUCTS("Products"),
+    VENDORS("Vendors"),
+    QUOTES("Quotes"),
+    SALES_ORDERS("Sales_Orders"),
+    INVOICES("Invoices");
 
     private final String moduleName;
 

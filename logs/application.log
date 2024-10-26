@@ -1,556 +1,31 @@
-2024-10-23T21:04:51.840+02:00  INFO 21640 --- [CRM Injector] [main] com.bridge.BridgeApplication             : Starting BridgeApplication using Java 19.0.1 with PID 21640 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23T21:04:51.842+02:00 DEBUG 21640 --- [CRM Injector] [main] com.bridge.BridgeApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23T21:04:51.842+02:00  INFO 21640 --- [CRM Injector] [main] com.bridge.BridgeApplication             : No active profile set, falling back to 1 default profile: "default"
-2024-10-23T21:04:52.341+02:00  INFO 21640 --- [CRM Injector] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23T21:04:52.399+02:00  INFO 21640 --- [CRM Injector] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
-2024-10-23T21:04:52.886+02:00  INFO 21640 --- [CRM Injector] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-10-23T21:04:52.898+02:00  INFO 21640 --- [CRM Injector] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-10-23T21:04:52.899+02:00  INFO 21640 --- [CRM Injector] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23T21:04:52.952+02:00  INFO 21640 --- [CRM Injector] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-10-23T21:04:52.952+02:00  INFO 21640 --- [CRM Injector] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1069 ms
-2024-10-23T21:04:53.087+02:00  INFO 21640 --- [CRM Injector] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23T21:04:53.141+02:00  INFO 21640 --- [CRM Injector] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23T21:04:53.162+02:00  INFO 21640 --- [CRM Injector] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-10-23T21:04:53.377+02:00  INFO 21640 --- [CRM Injector] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23T21:04:53.401+02:00  INFO 21640 --- [CRM Injector] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-10-23T21:04:53.526+02:00  INFO 21640 --- [CRM Injector] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6b6def36
-2024-10-23T21:04:53.527+02:00  INFO 21640 --- [CRM Injector] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-10-23T21:04:53.553+02:00  WARN 21640 --- [CRM Injector] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23T21:04:54.094+02:00  INFO 21640 --- [CRM Injector] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23T21:04:54.127+02:00  INFO 21640 --- [CRM Injector] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23T21:04:54.347+02:00  WARN 21640 --- [CRM Injector] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23T21:04:54.614+02:00  INFO 21640 --- [CRM Injector] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-10-23T21:04:54.621+02:00  INFO 21640 --- [CRM Injector] [main] com.bridge.BridgeApplication             : Started BridgeApplication in 3.134 seconds (process running for 3.405)
-2024-10-23T21:05:17.421+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23T21:05:17.421+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-10-23T21:05:17.422+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-10-23T21:05:17.540+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Found 20 leads to synchronize
-2024-10-23T21:05:17.540+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Processing batch with 20 leads
-2024-10-23T21:05:18.790+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 1 successfully synchronized with Zoho
-2024-10-23T21:05:18.793+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 2 successfully synchronized with Zoho
-2024-10-23T21:05:18.796+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 3 successfully synchronized with Zoho
-2024-10-23T21:05:18.799+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 4 successfully synchronized with Zoho
-2024-10-23T21:05:18.801+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 5 successfully synchronized with Zoho
-2024-10-23T21:05:18.803+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 6 successfully synchronized with Zoho
-2024-10-23T21:05:18.807+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 7 successfully synchronized with Zoho
-2024-10-23T21:05:18.809+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 9 successfully synchronized with Zoho
-2024-10-23T21:05:18.811+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 10 successfully synchronized with Zoho
-2024-10-23T21:05:18.813+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 11 successfully synchronized with Zoho
-2024-10-23T21:05:18.815+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 12 successfully synchronized with Zoho
-2024-10-23T21:05:18.818+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 13 successfully synchronized with Zoho
-2024-10-23T21:05:18.820+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 15 successfully synchronized with Zoho
-2024-10-23T21:05:18.822+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 16 successfully synchronized with Zoho
-2024-10-23T21:05:18.824+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 18 successfully synchronized with Zoho
-2024-10-23T21:05:18.827+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 19 successfully synchronized with Zoho
-2024-10-23T21:05:18.829+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 20 successfully synchronized with Zoho
-2024-10-23T21:05:18.829+02:00  WARN 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 8 failed to sync: required field not found
-2024-10-23T21:05:18.829+02:00  WARN 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 14 failed to sync: required field not found
-2024-10-23T21:05:18.829+02:00  WARN 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : Lead id 17 failed to sync: required field not found
-2024-10-23T21:05:18.829+02:00  INFO 21640 --- [CRM Injector] [http-nio-8080-exec-2] c.bridge.data.lead.service.LeadService   : CRM sync process completed successfully.
-2024-10-23T21:07:26.063+02:00  INFO 21640 --- [CRM Injector] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23T21:07:26.064+02:00  INFO 21640 --- [CRM Injector] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2024-10-23T21:07:26.066+02:00  INFO 21640 --- [CRM Injector] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2024-10-23 21:07:27 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 4616 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 21:07:27 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 21:07:27 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 21:07:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 21:07:28 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 1 JPA repository interface.
-2024-10-23 21:07:28 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 21:07:28 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 21:07:28 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 21:07:28 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 21:07:28 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1054 ms
-2024-10-23 21:07:29 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 21:07:29 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 21:07:29 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 21:07:29 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 21:07:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 21:07:29 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35e2b89f
-2024-10-23 21:07:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 21:07:29 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 21:07:30 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 21:07:30 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:07:30 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 21:07:30 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 21:07:30 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.174 seconds (process running for 3.443)
-2024-10-23 21:07:55 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 21:07:55 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 21:07:55 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-10-23 21:07:55 INFO  c.b.data.lead.service.LeadService - Found 20 leads to synchronize
-2024-10-23 21:07:55 INFO  c.b.data.lead.service.LeadService - Processing batch with 20 leads
-2024-10-23 21:07:56 INFO  c.b.data.lead.service.LeadService - Lead id 1 successfully synchronized with Zoho
-2024-10-23 21:07:56 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 21:07:56 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 21:07:56 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 12 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 13 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 16 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 18 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 19 successfully synchronized with Zoho
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - Lead id 20 successfully synchronized with Zoho
-2024-10-23 21:07:57 WARN  c.b.data.lead.service.LeadService - Lead id 8 failed to sync: required field not found
-2024-10-23 21:07:57 WARN  c.b.data.lead.service.LeadService - Lead id 14 failed to sync: required field not found
-2024-10-23 21:07:57 WARN  c.b.data.lead.service.LeadService - Lead id 17 failed to sync: required field not found
-2024-10-23 21:07:57 INFO  c.b.data.lead.service.LeadService - CRM sync process completed successfully.
-2024-10-23 21:09:41 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:09:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 21:09:41 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 21:09:45 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 22160 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 21:09:45 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 21:09:45 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 21:09:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 21:09:45 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 1 JPA repository interface.
-2024-10-23 21:09:46 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 21:09:46 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 21:09:46 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 21:09:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 21:09:46 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1088 ms
-2024-10-23 21:09:46 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 21:09:46 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 21:09:46 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 21:09:46 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 21:09:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 21:09:46 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@496cedbb
-2024-10-23 21:09:46 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 21:09:46 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 21:09:47 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 21:09:47 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:09:47 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 21:09:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 21:09:48 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.21 seconds (process running for 3.472)
-2024-10-23 21:09:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 21:09:50 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 21:09:50 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
-2024-10-23 21:09:50 INFO  c.b.data.lead.service.LeadService - Found 3 leads to synchronize
-2024-10-23 21:09:50 INFO  c.b.data.lead.service.LeadService - Processing batch with 3 leads
-2024-10-23 21:14:03 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:14:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 21:14:03 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 21:14:05 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 18116 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 21:14:05 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 21:14:05 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 21:14:08 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.285 seconds (process running for 3.568)
-2024-10-23 21:14:27 INFO  c.b.data.lead.service.LeadService - Found 20 leads to synchronize
-2024-10-23 21:14:27 INFO  c.b.data.lead.service.LeadService - Processing batch with 20 leads
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 1 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 12 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 13 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 16 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 18 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 19 successfully synchronized with Zoho
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - Lead id 20 successfully synchronized with Zoho
-2024-10-23 21:14:28 WARN  c.b.data.lead.service.LeadService - Lead id 8 failed to sync: required field not found
-2024-10-23 21:14:28 WARN  c.b.data.lead.service.LeadService - Lead id 14 failed to sync: required field not found
-2024-10-23 21:14:28 WARN  c.b.data.lead.service.LeadService - Lead id 17 failed to sync: required field not found
-2024-10-23 21:14:28 INFO  c.b.data.lead.service.LeadService - CRM sync process completed successfully.
-2024-10-23 21:20:49 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 23508 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 21:20:49 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 21:20:49 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 21:20:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 21:20:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
-2024-10-23 21:20:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 21:20:50 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 21:20:50 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 21:20:50 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 21:20:50 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1104 ms
-2024-10-23 21:20:50 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 21:20:51 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 21:20:51 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 21:20:51 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 21:20:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 21:20:51 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34fcd292
-2024-10-23 21:20:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 21:20:51 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 21:20:52 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 21:20:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:20:52 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 21:20:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 21:20:52 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.288 seconds (process running for 3.583)
-2024-10-23 21:21:06 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 21:21:06 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 21:21:06 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-10-23 21:21:06 INFO  c.b.data.lead.service.LeadService - Found 14 leads to synchronize
-2024-10-23 21:21:06 INFO  c.b.data.lead.service.LeadService - Processing batch with 14 leads
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 1 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 21:21:08 WARN  c.b.data.lead.service.LeadService - Lead id 8 failed to sync: required field not found
-2024-10-23 21:21:08 WARN  c.b.data.lead.service.LeadService - Lead id 14 failed to sync: required field not found
-2024-10-23 21:21:08 WARN  c.b.data.lead.service.LeadService - Lead id 17 failed to sync: required field not found
-2024-10-23 21:21:08 INFO  c.b.data.lead.service.LeadService - CRM sync process completed successfully.
-2024-10-23 21:30:01 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:30:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 21:30:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 21:30:04 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 196 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 21:30:04 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 21:30:04 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 21:30:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 21:30:05 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 52 ms. Found 1 JPA repository interface.
-2024-10-23 21:30:05 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 21:30:05 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 21:30:05 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 21:30:05 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 21:30:05 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1090 ms
-2024-10-23 21:30:06 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 21:30:06 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 21:30:06 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 21:30:06 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 21:30:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 21:30:06 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34fcd292
-2024-10-23 21:30:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 21:30:06 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 21:30:07 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 21:30:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 21:30:07 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 21:30:07 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 21:30:07 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.12 seconds (process running for 3.385)
-2024-10-23 21:30:31 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 21:30:31 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 21:30:31 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-10-23 21:30:31 INFO  c.b.data.lead.service.LeadService - Found 18 leads to synchronize
-2024-10-23 21:30:31 INFO  c.b.data.lead.service.LeadService - Processing batch with 18 leads
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 12 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 13 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 16 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 18 successfully synchronized with Zoho
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - Lead id 19 successfully synchronized with Zoho
-2024-10-23 21:30:32 WARN  c.b.data.lead.service.LeadService - Lead id 8 failed to sync: required field not found
-2024-10-23 21:30:32 WARN  c.b.data.lead.service.LeadService - Lead id 14 failed to sync: required field not found
-2024-10-23 21:30:32 WARN  c.b.data.lead.service.LeadService - Lead id 17 failed to sync: required field not found
-2024-10-23 21:30:32 INFO  c.b.data.lead.service.LeadService - CRM sync process completed successfully.
-2024-10-23 23:16:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:16:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:16:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 23:16:55 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 22356 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 23:16:55 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 23:16:55 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 23:16:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 23:16:56 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
-2024-10-23 23:16:56 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 23:16:56 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 23:16:56 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 23:16:56 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 23:16:56 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1194 ms
-2024-10-23 23:16:56 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 23:16:56 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 23:16:56 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 23:16:57 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 23:16:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 23:16:57 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@496cedbb
-2024-10-23 23:16:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 23:16:57 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 23:16:57 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
-2024-10-23 23:16:57 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
-2024-10-23 23:16:57 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 23:16:58 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:16:58 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 23:16:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 23:16:58 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.596 seconds (process running for 3.898)
-2024-10-23 23:17:12 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 23:17:12 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 23:17:12 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-10-23 23:17:12 INFO  c.b.data.lead.service.LeadService - Found 20 leads to synchronize
-2024-10-23 23:17:12 INFO  c.b.data.lead.service.LeadService - Processing batch with 20 leads
-2024-10-23 23:17:13 WARN  c.b.data.lead.service.LeadService - Lead id 8 failed to sync: required field not found
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 1 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 23:17:14 WARN  c.b.data.lead.service.LeadService - Lead id 14 failed to sync: required field not found
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 23:17:14 WARN  c.b.data.lead.service.LeadService - Lead id 17 failed to sync: required field not found
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 12 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 13 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 16 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 18 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 20 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - Lead id 19 successfully synchronized with Zoho
-2024-10-23 23:17:14 INFO  c.b.data.lead.service.LeadService - CRM sync process completed successfully.
-2024-10-23 23:33:09 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:33:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:33:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 23:33:13 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 3540 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 23:33:13 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 23:33:13 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 23:33:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 23:33:14 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
-2024-10-23 23:33:14 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 23:33:14 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 23:33:14 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 23:33:14 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 23:33:14 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1177 ms
-2024-10-23 23:33:14 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 23:33:14 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 23:33:14 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 23:33:15 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 23:33:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 23:33:15 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4cb24e2
-2024-10-23 23:33:15 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 23:33:15 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 23:33:15 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
-2024-10-23 23:33:15 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
-2024-10-23 23:33:15 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 23:33:15 WARN  o.h.t.s.i.ExceptionHandlerLoggedImpl - GenerationTarget encountered exception accepting command : Error executing DDL "alter table if exists sync_report alter column module set data type varchar(255)" via JDBC [ERROR: operator does not exist: character varying >= integer
-  Wskazówka: No operator matches the given name and argument types. You might need to add explicit type casts.]
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "alter table if exists sync_report alter column module set data type varchar(255)" via JDBC [ERROR: operator does not exist: character varying >= integer
-  Wskazówka: No operator matches the given name and argument types. You might need to add explicit type casts.]
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:583)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:523)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.migrateTable(AbstractSchemaMigrator.java:341)
-	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:84)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:240)
-	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:119)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144)
-	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141)
-	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
-	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:322)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
-	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
-	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
-	at com.bridge.BridgeApplication.main(BridgeApplication.java:12)
-Caused by: org.postgresql.util.PSQLException: ERROR: operator does not exist: character varying >= integer
-  Wskazówka: No operator matches the given name and argument types. You might need to add explicit type casts.
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356)
-	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341)
-	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:312)
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80)
-	... 37 common frames omitted
-2024-10-23 23:33:15 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:33:16 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 23:33:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 23:33:16 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.567 seconds (process running for 3.91)
-2024-10-23 23:33:19 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 23:33:19 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 23:33:19 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-10-23 23:33:19 INFO  c.b.data.lead.service.LeadService - Found 20 leads to synchronize
-2024-10-23 23:33:19 INFO  c.b.data.lead.service.LeadService - Processing batch with 20 leads
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 1 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 12 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 13 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 16 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 18 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 20 successfully synchronized with Zoho
-2024-10-23 23:33:21 INFO  c.b.data.lead.service.LeadService - Lead id 19 successfully synchronized with Zoho
-2024-10-23 23:33:21 WARN  c.b.data.lead.service.LeadService - Lead id 8 failed to sync: required field not found
-2024-10-23 23:33:21 WARN  c.b.data.lead.service.LeadService - Lead id 14 failed to sync: required field not found
-2024-10-23 23:33:21 WARN  c.b.data.lead.service.LeadService - Lead id 17 failed to sync: required field not found
-2024-10-23 23:33:21 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42804
-2024-10-23 23:33:21 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - ERROR: column "module" is of type smallint but expression is of type character varying
-  Wskazówka: You will need to rewrite or cast the expression.
-  Pozycja: 97
-2024-10-23 23:33:21 ERROR o.s.a.i.SimpleAsyncUncaughtExceptionHandler - Unexpected exception occurred invoking async method: public void com.bridge.data.lead.service.LeadService.sendToCrm()
-org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement [ERROR: column "module" is of type smallint but expression is of type character varying
-  Wskazówka: You will need to rewrite or cast the expression.
-  Pozycja: 97] [insert into sync_report (failed_syncs,module,successful_syncs,total_leads_processed) values (?,?,?,?) returning id]; SQL [insert into sync_report (failed_syncs,module,successful_syncs,total_leads_processed) values (?,?,?,?) returning id]
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:277)
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
-	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
-	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:165)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
-	at jdk.proxy2/jdk.proxy2.$Proxy125.save(Unknown Source)
-	at com.bridge.data.lead.service.LeadService.sendToCrm(LeadService.java:67)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
-	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
-	at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:113)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1589)
-Caused by: org.hibernate.exception.SQLGrammarException: could not execute statement [ERROR: column "module" is of type smallint but expression is of type character varying
-  Wskazówka: You will need to rewrite or cast the expression.
-  Pozycja: 97] [insert into sync_report (failed_syncs,module,successful_syncs,total_leads_processed) values (?,?,?,?) returning id]
-	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91)
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
-	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.execute(ResultSetReturnImpl.java:145)
-	at org.hibernate.id.insert.InsertReturningDelegate.executeAndExtractReturning(InsertReturningDelegate.java:96)
-	at org.hibernate.id.insert.AbstractReturningDelegate.performMutation(AbstractReturningDelegate.java:58)
-	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:47)
-	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
-	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:194)
-	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:132)
-	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:95)
-	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
-	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:671)
-	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:292)
-	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:273)
-	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:323)
-	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:391)
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:305)
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:224)
-	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:137)
-	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
-	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
-	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
-	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:757)
-	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:741)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:319)
-	at jdk.proxy2/jdk.proxy2.$Proxy119.persist(Unknown Source)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:626)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:173)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
-	... 19 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: column "module" is of type smallint but expression is of type character varying
-  Wskazówka: You will need to rewrite or cast the expression.
-  Pozycja: 97
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733)
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420)
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372)
-	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517)
-	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434)
-	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:194)
-	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:180)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.execute(ResultSetReturnImpl.java:129)
-	... 66 common frames omitted
-2024-10-23 23:35:49 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:35:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:35:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 23:35:51 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 21416 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 23:35:51 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 23:35:51 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 23:35:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 23:35:51 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
-2024-10-23 23:35:52 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 23:35:52 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 23:35:52 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 23:35:52 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 23:35:52 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1049 ms
-2024-10-23 23:35:52 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 23:35:52 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 23:35:52 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 23:35:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 23:35:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 23:35:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25218a4d
-2024-10-23 23:35:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 23:35:52 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 23:35:52 WARN  o.h.b.i.SessionFactoryOptionsBuilder - Unrecognized hibernate.hbm2ddl.auto value: 'drop-create'.  Supported values include 'create', 'create-drop', 'create-only', 'drop', 'update', 'none' and 'validate'.  Ignoring
-2024-10-23 23:35:52 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'drop-create'
-2024-10-23 23:35:52 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'drop-create'
-2024-10-23 23:35:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:35:53 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 23:35:53 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2024-10-23 23:35:53 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+2024-10-25 20:55:34 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 9356 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
+2024-10-25 20:55:34 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-25 20:55:34 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-25 20:55:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-25 20:55:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 15 JPA repository interfaces.
+2024-10-25 20:55:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-25 20:55:36 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-25 20:55:36 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-25 20:55:36 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-25 20:55:36 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1629 ms
+2024-10-25 20:55:36 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-25 20:55:36 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-25 20:55:36 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-25 20:55:36 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-25 20:55:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-25 20:55:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1eab8437
+2024-10-25 20:55:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-25 20:55:37 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-25 20:55:37 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Entity 'com.bridge.data.product.model.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+2024-10-25 20:55:37 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Entity 'com.bridge.data.product.model.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+2024-10-25 20:55:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-25 20:55:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-25 20:55:37 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-10-25 20:55:37 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-10-23 23:35:53 ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'drop-create'
+2024-10-25 20:55:37 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Entity 'com.bridge.data.product.model.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
@@ -567,150 +42,142 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
 	at com.bridge.BridgeApplication.main(BridgeApplication.java:12)
-Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'drop-create'
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+Caused by: org.hibernate.AnnotationException: Entity 'com.bridge.data.product.model.Product' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.hibernate.boot.model.internal.InheritanceState.determineDefaultAccessType(InheritanceState.java:279)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:215)
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160)
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:407)
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:248)
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:399)
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:259)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:281)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:324)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
 	... 15 common frames omitted
-Caused by: java.lang.IllegalArgumentException: Unrecognized 'hibernate.hbm2ddl.auto' setting: 'drop-create'
-	at org.hibernate.tool.schema.Action.interpretHbm2ddlSetting(Action.java:305)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.determineAutoSettingImpliedAction(SchemaManagementToolCoordinator.java:721)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.interpret(SchemaManagementToolCoordinator.java:729)
-	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator$ActionGrouping.interpret(SchemaManagementToolCoordinator.java:766)
-	at org.hibernate.boot.internal.MetadataImpl.shouldOrderTableColumns(MetadataImpl.java:467)
-	at org.hibernate.boot.internal.MetadataImpl.orderColumns(MetadataImpl.java:399)
-	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:279)
-	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:457)
-	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506)
+2024-10-25 20:56:11 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 10540 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
+2024-10-25 20:56:11 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-25 20:56:11 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-25 20:56:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-25 20:56:12 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 15 JPA repository interfaces.
+2024-10-25 20:56:13 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-25 20:56:13 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-25 20:56:13 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-25 20:56:13 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-25 20:56:13 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1216 ms
+2024-10-25 20:56:13 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-25 20:56:13 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-25 20:56:13 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-25 20:56:13 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-25 20:56:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-25 20:56:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4c2c44e8
+2024-10-25 20:56:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-25 20:56:13 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-25 20:56:14 ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Collection 'com.bridge.data.salesorder.model.SalesOrder.orderedItems' is 'mappedBy' a property named 'sales_order' which does not exist in the target entity 'com.bridge.data.salesorder.model.OrderedItem'
+2024-10-25 20:56:14 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.bridge.data.salesorder.model.SalesOrder.orderedItems' is 'mappedBy' a property named 'sales_order' which does not exist in the target entity 'com.bridge.data.salesorder.model.OrderedItem'
+2024-10-25 20:56:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-25 20:56:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-25 20:56:14 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-10-25 20:56:14 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-10-25 20:56:14 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Collection 'com.bridge.data.salesorder.model.SalesOrder.orderedItems' is 'mappedBy' a property named 'sales_order' which does not exist in the target entity 'com.bridge.data.salesorder.model.OrderedItem'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.bridge.BridgeApplication.main(BridgeApplication.java:12)
+Caused by: org.hibernate.AnnotationException: Collection 'com.bridge.data.salesorder.model.SalesOrder.orderedItems' is 'mappedBy' a property named 'sales_order' which does not exist in the target entity 'com.bridge.data.salesorder.model.OrderedItem'
+	at org.hibernate.boot.model.internal.CollectionBinder.isReversePropertyInJoin(CollectionBinder.java:1639)
+	at org.hibernate.boot.model.internal.CollectionBinder.noAssociationTable(CollectionBinder.java:1653)
+	at org.hibernate.boot.model.internal.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:1614)
+	at org.hibernate.boot.model.internal.CollectionBinder$1.secondPass(CollectionBinder.java:1605)
+	at org.hibernate.boot.model.internal.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1811)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.processSecondPasses(InFlightMetadataCollectorImpl.java:1770)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:334)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502)
 	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
-	... 19 common frames omitted
-2024-10-23 23:36:24 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 15276 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 23:36:24 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 23:36:24 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 23:36:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 23:36:24 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
-2024-10-23 23:36:25 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 23:36:25 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 23:36:25 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 23:36:25 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 23:36:25 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1082 ms
-2024-10-23 23:36:25 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 23:36:25 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 23:36:25 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 23:36:25 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 23:36:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 23:36:25 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2296127
-2024-10-23 23:36:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 23:36:25 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 23:36:26 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
-2024-10-23 23:36:26 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
-2024-10-23 23:36:26 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 23:36:26 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:36:26 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 23:36:27 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 23:36:27 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.366 seconds (process running for 3.639)
-2024-10-23 23:36:40 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:36:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:36:40 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 23:36:41 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 13528 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 23:36:41 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 23:36:41 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 23:36:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 23:36:42 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
-2024-10-23 23:36:42 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 23:36:42 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 23:36:42 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 23:36:42 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 23:36:42 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1061 ms
-2024-10-23 23:36:43 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 23:36:43 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 23:36:43 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 23:36:43 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 23:36:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 23:36:43 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d0e1a9a
-2024-10-23 23:36:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 23:36:43 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 23:36:43 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
-2024-10-23 23:36:44 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
-2024-10-23 23:36:44 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "sync_record" does not exist, skipping
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "lead" does not exist, skipping
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "sync_record" does not exist, skipping
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:36:44 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "sync_report" does not exist, skipping
-2024-10-23 23:36:44 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:36:44 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 23:36:44 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 23:36:44 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.256 seconds (process running for 3.535)
-2024-10-23 23:37:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:37:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:37:57 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2024-10-23 23:37:59 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 8688 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
-2024-10-23 23:37:59 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
-2024-10-23 23:37:59 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
-2024-10-23 23:38:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-10-23 23:38:00 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 3 JPA repository interfaces.
-2024-10-23 23:38:01 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2024-10-23 23:38:01 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2024-10-23 23:38:01 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
-2024-10-23 23:38:01 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2024-10-23 23:38:01 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1280 ms
-2024-10-23 23:38:01 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-10-23 23:38:01 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
-2024-10-23 23:38:01 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
-2024-10-23 23:38:01 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-10-23 23:38:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2024-10-23 23:38:01 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@25218a4d
-2024-10-23 23:38:01 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2024-10-23 23:38:01 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-10-23 23:38:02 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
-2024-10-23 23:38:02 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
-2024-10-23 23:38:02 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - relation "sync_record" does not exist, skipping
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "lead" does not exist, skipping
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "sync_record" does not exist, skipping
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
-2024-10-23 23:38:02 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - table "sync_report" does not exist, skipping
-2024-10-23 23:38:02 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:38:02 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-10-23 23:38:03 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
-2024-10-23 23:38:03 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.693 seconds (process running for 4.027)
-2024-10-23 23:38:24 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-10-23 23:38:24 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2024-10-23 23:38:24 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2024-10-23 23:38:24 INFO  c.b.data.lead.service.LeadService - Found 20 leads to synchronize
-2024-10-23 23:38:24 INFO  c.b.data.lead.service.LeadService - Processing batch with 20 leads
-2024-10-23 23:38:25 INFO  c.b.data.lead.service.LeadService - Lead id 1 successfully synchronized with Zoho
-2024-10-23 23:38:25 INFO  c.b.data.lead.service.LeadService - Lead id 2 successfully synchronized with Zoho
-2024-10-23 23:38:25 INFO  c.b.data.lead.service.LeadService - Lead id 3 successfully synchronized with Zoho
-2024-10-23 23:38:25 INFO  c.b.data.lead.service.LeadService - Lead id 4 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 5 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 6 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 7 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 8 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 9 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 10 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 11 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 12 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 13 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 14 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 15 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 16 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 17 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 18 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 19 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - Lead id 20 successfully synchronized with Zoho
-2024-10-23 23:38:26 INFO  c.b.data.lead.service.LeadService - CRM sync process completed successfully.
-2024-10-23 23:46:14 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2024-10-23 23:46:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2024-10-23 23:46:14 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 15 common frames omitted
+2024-10-25 20:58:47 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 14188 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
+2024-10-25 20:58:47 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-25 20:58:47 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-25 20:58:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-25 20:58:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 15 JPA repository interfaces.
+2024-10-25 20:58:48 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-25 20:58:48 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-25 20:58:48 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-25 20:58:49 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-25 20:58:49 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1155 ms
+2024-10-25 20:58:49 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-25 20:58:49 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-25 20:58:49 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-25 20:58:49 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-25 20:58:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-25 20:58:49 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@dd737ea
+2024-10-25 20:58:49 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-25 20:58:49 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-25 20:58:50 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
+2024-10-25 20:58:50 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
+2024-10-25 20:58:50 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-25 20:58:50 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-25 20:58:50 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-25 20:58:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-10-25 20:58:51 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 3.655 seconds (process running for 3.914)
+2024-10-25 21:34:51 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-25 21:34:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-25 21:34:51 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-10-25 21:34:54 INFO  com.bridge.BridgeApplication - Starting BridgeApplication using Java 19.0.1 with PID 15148 (C:\Users\patry\Desktop\crm\target\classes started by patryk in C:\Users\patry\Desktop\CRM)
+2024-10-25 21:34:54 DEBUG com.bridge.BridgeApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-25 21:34:54 INFO  com.bridge.BridgeApplication - No active profile set, falling back to 1 default profile: "default"
+2024-10-25 21:34:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-25 21:34:55 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 100 ms. Found 15 JPA repository interfaces.
+2024-10-25 21:34:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-25 21:34:55 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-25 21:34:55 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-10-25 21:34:55 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-25 21:34:55 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1274 ms
+2024-10-25 21:34:55 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-25 21:34:56 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-10-25 21:34:56 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-25 21:34:56 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-25 21:34:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-25 21:34:56 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7757025d
+2024-10-25 21:34:56 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-25 21:34:56 WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-10-25 21:34:57 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncRecord (class must be instantiated by Interceptor)
+2024-10-25 21:34:57 INFO  o.h.m.i.EntityInstantiatorPojoStandard - HHH000182: No default (no-argument) constructor for class: com.bridge.report.model.SyncReport (class must be instantiated by Interceptor)
+2024-10-25 21:34:57 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-25 21:34:57 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-25 21:34:57 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-25 21:34:58 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-10-25 21:34:58 INFO  com.bridge.BridgeApplication - Started BridgeApplication in 4.041 seconds (process running for 4.378)
+2024-10-25 21:51:06 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-10-25 21:51:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-10-25 21:51:06 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -55,7 +55,7 @@ public class ContactService {
         List<List<Contact>> batches = BatchUtils.splitIntoBatches(contacts, BATCH_SIZE);
 
         for (List<Contact> batch : batches) {
-            logger.info("Processing batch with {} accounts", batch.size());
+            logger.info("Processing batch with {} contacts", batch.size());
 
             List<CrmContactDto> crmContactDtoList = batch.stream().map(contactZohoMapper::toDto).toList();
             CrmRequest<CrmContactDto> crmRequest = new CrmRequest<>(crmContactDtoList);

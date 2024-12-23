@@ -3,12 +3,9 @@ package com.bridge.zoho.auth.service;
 import com.bridge.zoho.auth.dto.TokenResponse;
 import com.bridge.zoho.auth.model.Token;
 import com.bridge.zoho.utils.CrmUrlBuilder;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -70,7 +67,7 @@ public class TokenService {
         if (response.getStatusCode().is2xxSuccessful() && response.getBody() != null) {
             updateToken(response.getBody());
         } else {
-            throw new RuntimeException("Error is refreshing token");
+            throw new RuntimeException("Error while refreshing token");
         }
     }
 

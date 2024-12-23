@@ -63,7 +63,7 @@ public class SalesOrderService {
 
             List<CrmSalesOrderDto> crmSalesOrderDtoList = batch.stream().map(salesOrderZohoMapper::toDto).toList();
             CrmRequest<CrmSalesOrderDto> crmRequest = new CrmRequest<>(crmSalesOrderDtoList);
-            CrmResponse crmResponse = crmApiClient.sendDataToCrm(crmRequest, Module.ACCOUNTS);
+            CrmResponse crmResponse = crmApiClient.sendDataToCrm(crmRequest, Module.SALES_ORDERS);
 
             handleCrmResponse(crmResponse, batch, syncReport);
         }

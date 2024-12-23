@@ -57,7 +57,7 @@ public class InvoiceService {
 
             List<CrmInvoiceDto> crmInvoiceDtoList = batch.stream().map(invoiceZohoMapper::toDto).toList();
             CrmRequest<CrmInvoiceDto> crmRequest = new CrmRequest<>(crmInvoiceDtoList);
-            CrmResponse crmResponse = crmApiClient.sendDataToCrm(crmRequest, Module.ACCOUNTS);
+            CrmResponse crmResponse = crmApiClient.sendDataToCrm(crmRequest, Module.INVOICES);
 
             handleCrmResponse(crmResponse, batch, syncReport);
         }

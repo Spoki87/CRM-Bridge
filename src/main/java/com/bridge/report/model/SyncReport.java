@@ -16,16 +16,16 @@ public class SyncReport {
 
     @Enumerated(EnumType.STRING)
     private Module module;
-    private int totalLeadsProcessed;
+    private int totalRecordsProcessed;
     private int successfulSyncs;
     private int failedSyncs;
 
     @OneToMany(mappedBy = "syncReport", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<SyncRecord> syncRecords = new ArrayList<>();
 
-    public SyncReport(Module module, int totalLeadsProcessed){
+    public SyncReport(Module module, int totalRecordsProcessed){
         this.module = module;
-        this.totalLeadsProcessed = totalLeadsProcessed;
+        this.totalRecordsProcessed = totalRecordsProcessed;
     }
 
 

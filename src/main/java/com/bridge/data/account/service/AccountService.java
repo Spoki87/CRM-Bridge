@@ -19,6 +19,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.List;
 
@@ -56,12 +57,12 @@ public class AccountService {
         for (List<Account> batch : batches) {
             logger.info("Processing batch with {} accounts", batch.size());
 
-            List<CrmAccountDto> crmAccountDtoList = batch.stream().map(accountZohoMapper::toDto).toList();
-            CrmRequest<CrmAccountDto> crmRequest = new CrmRequest<>(crmAccountDtoList);
-            CrmResponse crmResponse = crmApiClient.sendDataToCrm(crmRequest, Module.ACCOUNTS);
+                List<CrmAccountDto> crmAccountDtoList = batch.stream().map(accountZohoMapper::toDto).toList();
+                CrmRequest<CrmAccountDto> crmRequest = new CrmRequest<>(crmAccountDtoList);
+                CrmResponse crmResponse = crmApiClient.sendDataToCrm(crmRequest, Module.ACCOUNTS);
 
-            handleCrmResponse(crmResponse, batch, syncReport);
-        }
+                handleCrmResponse(crmResponse, batch, syncReport);
+            }
 
         syncReportRepository.save(syncReport);
         logger.info("CRM sync process completed successfully.");
@@ -71,7 +72,7 @@ public class AccountService {
         if (crmResponse.getData() != null) {
             for (int i = 0; i < crmResponse.getData().size(); i++) {
                 Data responseData = crmResponse.getData().get(i);
-                if ("success".equalsIgnoreCase(responseData.getStatus())) {
+                if (responseData.getStatus().equalsIgnoreCase("success")) {
                     Account account = batch.get(i);
                     account.setZohoId(Long.valueOf(responseData.getDetails().getId()));
                     accountRepository.save(account);
